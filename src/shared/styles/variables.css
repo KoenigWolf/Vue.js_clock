@@ -1,0 +1,78 @@
+/**
+ * グローバルCSS変数の定義
+ */
+
+:root {
+  /* カラー - モダンで洗練されたパレット */
+  --color-background: #f0f2f5;
+  --color-text: #2b2d42;
+  --color-primary: #6246ea;
+  --color-secondary: #e45858;
+  --color-accent: #00f5d4;
+  --color-muted: #8d99ae;
+  
+  /* ニューモーフィズム用シャドウ */
+  --shadow-light: #ffffff;
+  --shadow-dark: rgba(163, 177, 198, 0.5);
+  --inner-shadow: inset 2px 2px 5px var(--shadow-dark);
+  --outer-shadow-sm: 5px 5px 10px var(--shadow-dark), -5px -5px 10px var(--shadow-light);
+  --outer-shadow-lg: 10px 10px 20px var(--shadow-dark), -10px -10px 20px var(--shadow-light);
+
+  /* フォント - 現代的でクリーンなタイポグラフィ */
+  --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-display: 'Space Mono', monospace;
+  --font-size-base: clamp(14px, 2vw, 16px);
+  --font-size-lg: clamp(1.1rem, 2.5vw, 1.25rem);
+  --font-size-xl: clamp(1.25rem, 3vw, 1.5rem);
+  --font-size-2xl: clamp(1.5rem, 4vw, 2rem);
+  --font-size-clock: clamp(3rem, 12vw, 7rem);
+  --line-height-clock: 1.1;
+
+  /* フォントウェイト */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 600;
+
+  /* スペーシング - レスポンシブ対応 */
+  --spacing-xs: clamp(0.25rem, 1vw, 0.5rem);
+  --spacing-sm: clamp(0.5rem, 1.5vw, 1rem);
+  --spacing-md: clamp(1rem, 2vw, 1.5rem);
+  --spacing-lg: clamp(1.5rem, 3vw, 2rem);
+  --spacing-xl: clamp(2rem, 4vw, 3rem);
+  --spacing-2xl: clamp(2.5rem, 5vw, 4rem);
+
+  /* レイアウト */
+  --container-max-width: min(900px, 95vw);
+  --clock-container-height: clamp(200px, 40vh, 400px);
+  --border-radius-sm: clamp(4px, 1vw, 8px);
+  --border-radius-md: clamp(8px, 1.5vw, 16px);
+  --border-radius-lg: clamp(12px, 2vw, 24px);
+  --border-radius-full: 9999px;
+
+  /* アニメーション */
+  --transition-duration: 0.4s;
+  --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  
+  /* Zインデックス */
+  --z-index-base: 1;
+  --z-index-above: 2;
+  --z-index-modal: 100;
+}
+
+/* ダークモード用のCSS変数 */
+[data-theme="dark"] {
+  --color-background: #13151a;
+  --color-text: #e9ecef;
+  --color-primary: #a78bfa;
+  --color-secondary: #f87171;
+  --color-accent: #22d3ee;
+  --color-muted: #6b7280;
+  
+  /* ダークモード用ニューモーフィズムシャドウ */
+  --shadow-light: rgba(255, 255, 255, 0.05);
+  --shadow-dark: rgba(0, 0, 0, 0.5);
+  --inner-shadow: inset 2px 2px 5px var(--shadow-dark);
+  --outer-shadow-sm: 5px 5px 10px var(--shadow-dark), -5px -5px 10px var(--shadow-light);
+  --outer-shadow-lg: 10px 10px 20px var(--shadow-dark), -10px -10px 20px var(--shadow-light);
+}
